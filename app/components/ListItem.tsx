@@ -1,29 +1,24 @@
-'use client'
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-import {FaPlay} from 'react-icons/fa'
-import React from 'react'
+"use client";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { FaPlay } from "react-icons/fa";
+import React from "react";
 
-
-interface ListItemProps{
-    image:string,
-    name:string,
-    href:string
+interface ListItemProps {
+  image: string;
+  name: string;
+  href: string;
 }
-const ListItem:React.FC<ListItemProps> = ({
-    image,
-    name,
-    href
-}) => {
-    const router = useRouter()
+const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
+  const router = useRouter();
 
-    const onCLick= ()=>{
-        router.push(href)
-    }
+  const onCLick = () => {
+    router.push(href);
+  };
   return (
     <button
-    onClick={onCLick}
-     className='
+      onClick={onCLick}
+      className="
       relative
       group
       flex
@@ -34,20 +29,14 @@ const ListItem:React.FC<ListItemProps> = ({
       bg-neutral-100/10
       hover:bg-neutral-100/20
       transition
-     '
+     "
     >
-        <div className=' relative min-h-[64px] min-w-[64px]'>
-          <Image
-           src={image}
-           fill
-           className=' object-cover'
-           alt='Image'
-          />
-        </div>
-        <p className=' font-medium truncate py-5'>
-            {name}
-        </p>
-        <div className='
+      <div className=" relative min-h-[64px] min-w-[64px]">
+        <Image src={image} fill className=" object-cover" alt="Image" />
+      </div>
+      <p className=" font-medium truncate py-5">{name}</p>
+      <div
+        className="
          absolute
          transition
          opacity-0
@@ -61,11 +50,12 @@ const ListItem:React.FC<ListItemProps> = ({
          right-5
          group-hover:opacity-100
          hover:scale-110
-        '>
-            <FaPlay className=" text-black"/>
-        </div>
+        "
+      >
+        <FaPlay className=" text-black" />
+      </div>
     </button>
-  )
-}
+  );
+};
 
-export default ListItem
+export default ListItem;
