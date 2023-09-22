@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Header from '../components/Header'
-import ListItem from '../components/ListItem'
+import Header from './components/Header'
+import ListItem from './components/ListItem'
 export default function Home() {
   return (
    
