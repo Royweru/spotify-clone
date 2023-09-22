@@ -7,6 +7,7 @@ import {RxCaretLeft, RxCaretRight} from 'react-icons/rx'
 import { HiHome } from 'react-icons/hi'
 import { BiSearch } from 'react-icons/bi'
 import Button from './Button'
+import useAuthModal from '@/hooks/useAuthModal'
 interface HeaderProps{
     children:React.ReactNode,
     className?:string
@@ -16,7 +17,7 @@ const Header:React.FC<HeaderProps> = ({
  className
 }) => {
 const router = useRouter()
-
+const authModal = useAuthModal()
 const handleLogout = ()=>{
 
 }
@@ -114,6 +115,7 @@ const handleLogout = ()=>{
                 <>
                  <div>
                     <Button
+                    onClick={authModal.onOpen}
                      className='
                       bg-transparent
                       text-neutral-300
@@ -125,6 +127,7 @@ const handleLogout = ()=>{
                  </div>
                  <div>
                     <Button
+                    onClick={authModal.onOpen}
                      className='
                      bg-white
                      px-6
