@@ -1,7 +1,7 @@
 'use client'
 
 import AuthModal from '@/app/components/AuthModal'
-import Modal from '@/app/components/Modal'
+
 import React,{useState,useEffect} from 'react'
 
 const ModalProvider = () => {
