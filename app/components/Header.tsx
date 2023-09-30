@@ -101,7 +101,7 @@ const handleLogout = async ()=>{
                      transition
                     '
                    >
-                    <HiHome className="text-black size={20" />
+                    <HiHome className="text-black " size={20} />
                    </button>
                    <button
                     className='
@@ -115,7 +115,7 @@ const handleLogout = async ()=>{
                      transition
                     '
                    >
-                    <BiSearch className="text-black size={20" />
+                    <BiSearch className="text-black" size={20} />
                    </button>
             </div>
             <div 
@@ -128,24 +128,27 @@ const handleLogout = async ()=>{
             >
                 {
                 user?(
-                  <div className=' flex gap-x-4 items-center'>
-                    <Button
-                     onClick={handleLogout}
-                     className='
-                      bg-white px-6 py-2 text-green-300
-                     '
-                    >
-                        Logout
-                    </Button>
-                    <Button
-                     onClick={()=>router.push('/account')}
-                     className='
-                      bg-white text-green-300
-                     '
-                    >
-                        <FaUserAlt />
-                    </Button>
-                    </div>
+                    <>
+                        <div className=' flex gap-x-4 items-center'>
+                        <Button
+                        onClick={handleLogout}
+                        className='
+                        bg-white px-6 py-2 text-green-300
+                        '
+                        >
+                            Logout
+                        </Button>
+                        <Button
+                        onClick={()=>router.push('/account')}
+                        className='
+                        bg-white text-green-300
+                        '
+                        >
+                            <FaUserAlt />
+                        </Button>
+                        </div>
+                    </>
+                  
                 ):(
                     <>
                     <div>
